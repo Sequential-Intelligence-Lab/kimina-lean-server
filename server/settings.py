@@ -18,16 +18,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent  # Repository root directory
 
 class Settings(BaseSettings):
     host: str = "0.0.0.0"
-    port: int = 8000
+    port: int = 7999
     log_level: str = "INFO"
 
     api_key: str | None = None
 
     environment: Environment = Environment.dev
 
-    lean_version: str = "v4.15.0"
-    repl_path: Path = BASE_DIR / "repl/.lake/build/bin/repl"
-    project_dir: Path = BASE_DIR / "mathlib4"
+    lean_version: str = "v4.24.0"
+    repl_path: Path = BASE_DIR.parent / "repl/.lake/build/bin/repl"
+    project_dir: Path = BASE_DIR.parent / "mathlib4-lemma/.lake/packages/mathlib"
 
     max_repls: int = max((os.cpu_count() or 1) - 1, 1)
     max_repl_uses: int = -1

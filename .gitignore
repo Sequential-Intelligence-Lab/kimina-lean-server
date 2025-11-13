@@ -18,3 +18,5 @@ repl/
 
 # PostgreSQL data
 .data/
+
+node_modules/
