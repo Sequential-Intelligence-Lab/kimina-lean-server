@@ -27,7 +27,7 @@ class Settings(BaseSettings):
 
     lean_version: str = "v4.24.0"
     repl_path: Path = BASE_DIR.parent / "repl/.lake/build/bin/repl"
-    project_dir: Path = BASE_DIR.parent / "mathlib4-lemma/.lake/packages/mathlib"
+    project_dir: Path = BASE_DIR.parent / "mathlib4-lemma"
 
     max_repls: int = max((os.cpu_count() or 1) - 1, 1)
     max_repl_uses: int = -1
